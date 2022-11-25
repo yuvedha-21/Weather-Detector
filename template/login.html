@@ -1,0 +1,35 @@
+<style>
+ h3{
+   color:red;
+ }
+ .box{
+   width:100%;
+   justify-content: center;
+ }
+</style>
+<div class="box">
+  <h1><b>LOGIN NOW</b></h1>
+
+
+  {% for message in messages%}
+  <h3>{{message}}</h3>
+  {%endfor%}
+  <form action="login" method="POST">
+  {% csrf_token %}
+   <p>Username : </p>
+   <input type="text" name="loginUsername" placeholder="Enter Text" />
+   <p>
+     Password :
+   </p>
+   <input type="password" name="loginPassword"/><br>
+   <ul style="list-style: none;"><br>
+  <li><a class="getstarted scrollto" href="index">Login</li><br>
+  <li><a class="getstarted scrollto" href="register">Not an User? Click to Register</li>
+   <br>
+   <!-- <p><input type="submit"/> -->
+
+   </ul></p>
+
+
+  </form>
+</div>
